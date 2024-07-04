@@ -3,7 +3,6 @@ package entities;
 
 import jakarta.persistence.*;
 import lombok.Data;
-import lombok.Getter;
 
 import java.sql.Time;
 import java.util.Date;
@@ -35,8 +34,8 @@ public class Prescricao {
     private Time horarioAdm;
 
     @ManyToOne
-    @JoinColumn(name = "id_paciente")
-    private Paciente paciente;
+    @JoinColumn(name = "id_residente")
+    private Residente residente;
 
     @ManyToOne
     @JoinColumn(name = "id_medicamento")

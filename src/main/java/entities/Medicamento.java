@@ -4,7 +4,7 @@ import jakarta.persistence.*;
 import lombok.*;
 
 @Entity
-@Table(name = "Medicamentos")
+@Table(name = "medicamento")
 @Data
 
 public class Medicamento {
@@ -14,7 +14,7 @@ public class Medicamento {
     @Column(name = "id_medicamento")
     private Long id;
 
-    @Column(name = "nomeMedicamento", nullable = false)
+    @Column(name = "nome_medicamento", nullable = false)
     private String nomeMedicamento;
 
 
