@@ -1,11 +1,12 @@
-package entities;
+package br.com.casannova.casamed.entities;
 
 import jakarta.persistence.*;
 import lombok.*;
 
 @Entity
-@Table(name = "medicamento")
 @Data
+@Table(name = "medicamento")
+
 
 public class Medicamento {
 

@@ -1,15 +1,19 @@
-package entities;
+package br.com.casannova.casamed.entities;
 
 
 import jakarta.persistence.*;
 import lombok.*;
 
 import java.time.LocalDate;
-import java.util.Date;
 
 @Entity
 @Table(name = "residente")
-@Data
+@Getter
+@Setter
+@NoArgsConstructor
+@AllArgsConstructor
+@EqualsAndHashCode
+
 
 public class Residente {
 

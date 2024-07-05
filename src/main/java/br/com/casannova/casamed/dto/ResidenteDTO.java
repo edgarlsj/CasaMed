@@ -1,10 +1,9 @@
-package dto;
+package br.com.casannova.casamed.dto;
 
-import entities.Medicamento;
+import br.com.casannova.casamed.entities.Medicamento;
 import lombok.Data;
 
 import java.time.LocalDate;
-import java.util.Date;
 
 @Data
 

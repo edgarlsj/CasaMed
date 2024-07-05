@@ -1,4 +1,4 @@
-package entities;
+package br.com.casannova.casamed.entities;
 
 
 import jakarta.persistence.*;
