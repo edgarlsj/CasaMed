@@ -5,6 +5,7 @@ import br.com.casannova.casamed.dto.ResidenteDTO;
 import br.com.casannova.casamed.entities.Residente;
 import br.com.casannova.casamed.mapper.ResidenteMapper;
 import br.com.casannova.casamed.repositories.ResidenteRepository;
+import lombok.AllArgsConstructor;
 import lombok.Data;
 import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Service;
@@ -14,19 +15,11 @@ import java.util.List;
 import java.util.stream.Collectors;
 
 @Service
-@Data
+@AllArgsConstructor
 public class ResidenteService {
 
     private ResidenteRepository residenteRepository;
     private ResidenteMapper residenteMapper;
-
-    public ResidenteService(ResidenteRepository residenteRepository, ResidenteMapper residenteMapper) {
-        this.residenteRepository = residenteRepository;
-        this.residenteMapper = residenteMapper;
-
-
-    }
-
 
     public List<ResidenteDTO> getAllResidente() {
         List<ResidenteDTO> residenteDTOList = residenteRepository
@@ -58,6 +51,7 @@ public class ResidenteService {
 
     @Transactional
     public ResidenteDTO updateResidente(Long id, ResidenteDTO residenteDTO) {
+        residenteDTO.setId(id);
 
         Residente residente = residenteMapper.toEntity(residenteDTO);
 

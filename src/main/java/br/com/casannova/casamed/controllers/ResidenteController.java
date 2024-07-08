@@ -14,11 +14,9 @@ import java.util.List;
 @AllArgsConstructor
 @RequestMapping("/api/residentes")
 
-
 public class ResidenteController {
 
-
-    private ResidenteService residenteService;
+  private ResidenteService residenteService;
 
 
   @GetMapping//endpoint para buscar todos os residentes
@@ -46,8 +44,9 @@ public class ResidenteController {
     }
 
     @DeleteMapping("/{id}")//endpoint para deletar residente
-    public ResponseEntity<?> deleteResidente(@PathVariable Long id){
-      return residenteService.deleteResidente(id);
+    public ResponseEntity<Void> deleteResidente(@PathVariable Long id){
+       residenteService.deleteResidente(id);
+       return ResponseEntity.noContent().build();
     }
 
 
