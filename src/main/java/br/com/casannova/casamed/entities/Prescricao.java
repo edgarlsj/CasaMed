@@ -1,15 +1,23 @@
 package br.com.casannova.casamed.entities;
 
 
+import com.fasterxml.jackson.annotation.JsonIdentityReference;
+import com.fasterxml.jackson.annotation.JsonManagedReference;
 import jakarta.persistence.*;
 import lombok.Data;
+import lombok.Getter;
+import lombok.NoArgsConstructor;
+import lombok.Setter;
 
 import java.sql.Time;
 import java.util.Date;
+import java.util.List;
 
 @Entity
 @Table(name = "prescricao")
-@Data
+@Getter
+@Setter
+@NoArgsConstructor
 
 public class Prescricao {
 
@@ -37,9 +45,12 @@ public class Prescricao {
     @JoinColumn(name = "id_residente")
     private Residente residente;
 
-    @ManyToOne
-    @JoinColumn(name = "id_medicamento")
-    private Medicamento medicamento;
+    @ManyToMany
+    @JoinTable(name = "prescricao_medicamento",
+            joinColumns = @JoinColumn(name = "id_prescricao"),
+            inverseJoinColumns = @JoinColumn(name = "id_medicamento"))
+    private List<Medicamento> medicamentos;
+
 
     @Column(name = "etiqueta")
     private Boolean etiqueta;

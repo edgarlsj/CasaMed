@@ -22,12 +22,10 @@ public class MedicamentoService {
 
     @Transactional
     public List<MedicamentoDTO> getAllMedicamentos() {
-        List<MedicamentoDTO> list = medicamentoRepository.findAll()
+        return medicamentoRepository.findAll()
                 .stream()
                 .map(medicamentoMapper::toDTO)
                 .collect(Collectors.toList());
-
-        return list;
     }
 
     @Transactional
@@ -41,9 +39,7 @@ public class MedicamentoService {
     public MedicamentoDTO createMedicamento(MedicamentoDTO medicamentoDTO) {
         Medicamento medicamento = medicamentoMapper.toEntity(medicamentoDTO);
         Medicamento entityMedicamento = medicamentoRepository.save(medicamento);
-        MedicamentoDTO saveMedicamento = medicamentoMapper.toDTO(entityMedicamento);
-        return saveMedicamento;
-
+        return medicamentoMapper.toDTO(entityMedicamento);
     }
 
     @Transactional
@@ -51,8 +47,8 @@ public class MedicamentoService {
         medicamentoDTO.setId(id);
         Medicamento medicamento = medicamentoMapper.toEntity(medicamentoDTO);
         Medicamento entityMedicamento = medicamentoRepository.save(medicamento);
-        MedicamentoDTO saveMedicamento = medicamentoMapper.toDTO(entityMedicamento);
-        return saveMedicamento;
+         return medicamentoMapper.toDTO(entityMedicamento);
+
 
     }
 

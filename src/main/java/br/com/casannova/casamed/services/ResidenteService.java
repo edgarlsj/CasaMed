@@ -22,13 +22,13 @@ public class ResidenteService {
     private ResidenteMapper residenteMapper;
 
     public List<ResidenteDTO> getAllResidente() {
-        List<ResidenteDTO> residenteDTOList = residenteRepository
+       return residenteRepository
                 .findAll()
                 .stream()
                 .map(residenteMapper::toDTO)
                 .collect(Collectors.toList());
 
-        return residenteDTOList;
+
     }
 
     public ResidenteDTO findResidenteById(Long id) {
@@ -44,9 +44,7 @@ public class ResidenteService {
         // Salva a entidade no banco de dados
         Residente savedResidente = residenteRepository.save(residente);
         // converte a entidade salva em DTO
-        ResidenteDTO savedResidenteDTO = residenteMapper.toDTO(savedResidente);
-        // retorna o DTO salvo
-        return savedResidenteDTO;
+        return residenteMapper.toDTO(savedResidente);
     }
 
     @Transactional
@@ -57,9 +55,9 @@ public class ResidenteService {
 
         Residente saveResidente = residenteRepository.save(residente);
 
-        ResidenteDTO saveResidenteDTO = residenteMapper.toDTO(saveResidente);
+        return residenteMapper.toDTO(saveResidente);
 
-        return saveResidenteDTO;
+
     }
 
     @Transactional

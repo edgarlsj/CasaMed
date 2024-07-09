@@ -21,26 +21,22 @@ public class ResidenteController {
 
   @GetMapping//endpoint para buscar todos os residentes
   public ResponseEntity<?> getAllResidentes(){
-      List<ResidenteDTO> list = residenteService.getAllResidente();
-      return ResponseEntity.ok(list);
+      return ResponseEntity.ok(residenteService.getAllResidente());
   }
 
   @GetMapping("/{id}")//endpoint para buscar residente por id
     public ResponseEntity<?> getResidentesById(@PathVariable Long id){
-      ResidenteDTO residenteDTO = residenteService.findResidenteById(id);
-      return ResponseEntity.ok(residenteDTO);
+      return ResponseEntity.ok(residenteService.findResidenteById(id));
     }
 
     @PostMapping//endpoint para criar residente
     public ResponseEntity<?> createResidente(@RequestBody ResidenteDTO residenteDTO){
-      ResidenteDTO residenteCreate = residenteService.CreateResidente(residenteDTO);
-      return ResponseEntity.ok(residenteCreate);
+      return ResponseEntity.ok(residenteService.CreateResidente(residenteDTO));
     }
 
     @PutMapping("/{id}")//endpoint para atualizar residente
     public ResponseEntity<?> updateResidente (@PathVariable Long id, @RequestBody ResidenteDTO residenteDTO){
-    ResidenteDTO updateResidente = residenteService.updateResidente(id,residenteDTO);
-    return ResponseEntity.ok(updateResidente);
+    return ResponseEntity.ok(residenteService.updateResidente(id,residenteDTO));
     }
 
     @DeleteMapping("/{id}")//endpoint para deletar residente

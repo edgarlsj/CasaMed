@@ -12,7 +12,6 @@ import org.springframework.stereotype.Service;
 @AllArgsConstructor
 public class ResidenteMapper {
 
-    MedicamentoMapper medicamentoMapper;
 
     private ModelMapper modelMapper;
 

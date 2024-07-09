@@ -19,24 +19,20 @@ public class MedicamentoController {
 
     @GetMapping
     public ResponseEntity<?> getAllMedicamentos(){//endpoint para buscar todos os medicamentos
-        List<MedicamentoDTO> list = medicamentoService.getAllMedicamentos();
-        return ResponseEntity.ok(list);
+        return ResponseEntity.ok(medicamentoService.getAllMedicamentos());
     }
     @GetMapping("/{id}")
     public ResponseEntity<?> getById(@PathVariable Long id){
-        MedicamentoDTO dto = medicamentoService.findById(id);
-        return ResponseEntity.ok(dto);
+        return ResponseEntity.ok(medicamentoService.findById(id));
 
     }
     @PostMapping
     public ResponseEntity<?> createMedicamentos(@RequestBody MedicamentoDTO medicamentoDTO){
-        MedicamentoDTO create = medicamentoService.createMedicamento(medicamentoDTO);
-        return ResponseEntity.ok(create);
+        return ResponseEntity.ok(medicamentoService.createMedicamento(medicamentoDTO));
     }
     @PutMapping("/{id}")
     public ResponseEntity<?> updateMedicamentos(@PathVariable Long id, @RequestBody MedicamentoDTO medicamentoDTO){
-        MedicamentoDTO update = medicamentoService.updateMedicamento(id,medicamentoDTO);
-        return ResponseEntity.ok(update);
+        return ResponseEntity.ok(medicamentoService.updateMedicamento(id,medicamentoDTO));
     }
     @DeleteMapping("/{id}")
     public ResponseEntity<Void> deleteMedicamentos(Long id){

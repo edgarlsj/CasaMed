@@ -1,7 +1,12 @@
 package br.com.casannova.casamed.entities;
 
+import com.fasterxml.jackson.annotation.JsonBackReference;
+import com.fasterxml.jackson.annotation.JsonIdentityInfo;
+import com.fasterxml.jackson.annotation.JsonManagedReference;
 import jakarta.persistence.*;
 import lombok.*;
+
+import java.util.List;
 
 @Entity
 @Data
@@ -17,6 +22,9 @@ public class Medicamento {
 
     @Column(name = "nome_medicamento", nullable = false)
     private String nomeMedicamento;
+
+//    @ManyToMany(mappedBy = "medicamentos")
+//    private List<Prescricao> prescricoes;
 
 
 }

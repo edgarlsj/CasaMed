@@ -1,5 +1,4 @@
-INSERT INTO medicamento (nome_medicamento)
-VALUES
+INSERT INTO medicamento (nome_medicamento) VALUES
     ('ACETILCISTEINA 200MG'),
     ('ACICLOVIR 200MG'),
     ('ACIDO VALPRÓICO 300 M'),
@@ -9,19 +8,103 @@ VALUES
     ('Metformina 100MG'),
     ('Dipirona 100MG'),
     ('ATENOLOL 25MG'),
-    ('BENFOTIAMINA 150 MG');
+    ('BENFOTIAMINA 150 MG'),
+('BENZETACIL 600.000 UI'),
+    ('BETAMETASONA 0,5MG'),
+    ('BUPROPIONA 150MG'),
+    ('Captopril 25MG'),
+('Cefalexina 500MG'),
+    ('Cetoprofeno 100MG'),
+    ('Ciprofloxacino 500MG'),
+    ('Clonazepam 2MG'),
+    ('Cloridrato de Ciprofloxacino 500MG'),
+    ('Cloridrato de Sertralina 50MG'),
+    ('Cloridrato de Tetraciclina 500MG'),
+    ('Cloridrato de Venlafaxina 75MG'),
+    ('Cloridrato de Verapamil 120MG'),
+    ('Cloridrato de Verapamil 240MG'),
+    ('Cloridrato de Verapamil 80MG'),
+    ('Cloridrato de Vortioxetina 10MG'),
+    ('Cloridrato de Vortioxetina 20MG'),
+    ('Cloridrato de Vortioxetina 5MG');
 
 
-INSERT INTO residente (nome, data_nascimento, descricao_enfermidade, peso, convenio, sexo, alergias, id_medicamento)
-VALUES
-    ('Residente 1', '1930-01-01', 'Hipertensão', 70, 'Convênio 1', 'M', 'Nenhuma', 1),
-    ('Residente 2', '1935-02-02', 'Diabetes', 80, 'Convênio 2', 'F', 'Glúten', 2),
-    ('Residente 3', '1940-03-03', 'Artrite', 75, 'Convênio 3', 'M', 'Amendoim', 3),
-    ('Residente 4', '1945-04-04', 'Osteoporose', 65, 'Convênio 4', 'F', 'Lactose', 4),
-    ('Residente 5', '1950-05-05', 'Doença Cardíaca', 85, 'Convênio 5', 'M', 'Nenhuma', 5),
-    ('Residente 6', '1955-06-06', 'Alzheimer', 70, 'Convênio 6', 'F', 'Frutos do mar', 6),
-    ('Residente 7', '1960-07-07', 'Parkinson', 80, 'Convênio 7', 'M', 'Soja', 7),
-    ('Residente 8', '1965-08-08', 'Câncer', 75, 'Convênio 8', 'F', 'Ovos', 8),
-    ('Residente 9', '1970-09-09', 'Asma', 65, 'Convênio 9', 'M', 'Trigo', 9),
-    ('Residente 10', '1975-10-10', 'Epilepsia', 85, 'Convênio 10', 'F', 'Nenhuma', 10);
+
+
+INSERT INTO residente (nome, data_nascimento, descricao_enfermidade, peso, convenio, sexo, alergias) VALUES
+ ('João Silva', '1930-01-01', 'Hipertensão', 70, 'Convênio 1', 'M', 'Nenhuma'),
+ ('Maria Santos', '1935-02-02', 'Diabetes', 80, 'Convênio 2', 'F', 'Glúten'),
+ ('Antônio Pereira', '1940-03-03', 'Artrite', 75, 'Convênio 3', 'M', 'Amendoim'),
+ ('Francisca Oliveira', '1945-04-04', 'Osteoporose', 65, 'Convênio 4', 'F', 'Lactose'),
+ ('Paulo Costa', '1950-05-05', 'Doença Cardíaca', 85, 'Convênio 5', 'M', 'Nenhuma'),
+ ('Ana Lima', '1955-06-06', 'Alzheimer', 70, 'Convênio 6', 'F', 'Frutos do mar'),
+ ('Ricardo Sousa', '1960-07-07', 'Parkinson', 80, 'Convênio 7', 'M', 'Soja'),
+ ('Beatriz Carvalho', '1965-08-08', 'Câncer', 75, 'Convênio 8', 'F', 'Ovos'),
+ ('Carlos Almeida', '1970-09-09', 'Asma', 65, 'Convênio 9', 'M', 'Trigo'),
+ ('Juliana Gomes', '1975-10-10', 'Epilepsia', 85, 'Convênio 10', 'F', 'Nenhuma'),
+    ('Marcos Araújo', '1980-11-11', 'Depressão', 70, 'Convênio 11', 'M', 'Nenhuma'),
+    ('Fernanda Barros', '1985-12-12', 'Obesidade', 80, 'Convênio 12', 'F', 'Nenhuma'),
+    ('Roberto Cunha', '1990-01-01', 'Gastrite', 75, 'Convênio 13', 'M', 'Nenhuma'),
+    ('Patrícia Costa', '1995-02-02', 'Rinite', 65, 'Convênio 14', 'F', 'Nenhuma'),
+    ('Eduardo Lima', '2000-03-03', 'Gripe', 85, 'Convênio 15', 'M', 'Nenhuma'),
+    ('Mariana Santos', '2005-04-04', 'Dor de Cabeça', 70, 'Convênio 16', 'F', 'Nenhuma'),
+    ('José Silva', '2010-05-05', 'Dor de Garganta', 80, 'Convênio 17', 'M', 'Nenhuma'),
+    ('Amanda Pereira', '2015-06-06', 'Dor nas Costas', 75, 'Convênio 18', 'F', 'Nenhuma'),
+    ('Lucas Oliveira', '2020-07-07', 'Dor nas Pernas', 65, 'Convênio 19', 'M', 'Nenhuma'),
+    ('Gabriela Costa', '2025-08-08', 'Dor nos Braços', 85, 'Convênio 20', 'F', 'Nenhuma');
+
+-- Inserção de dados iniciais na tabela prescricao
+INSERT INTO prescricao (data_prescricao, dose, periodo_dia, via, horario_adm, id_residente, etiqueta, observacao) VALUES
+ ('2022-01-01', '2 comprimidos', 'Manhã', 'Oral', '08:00:00', 1, true, 'Tomar após o café da manhã'),
+ ('2022-01-02', '1 comprimido', 'Noite', 'Oral', '20:00:00', 2, false, 'Tomar antes de dormir'),
+ ('2022-01-03', '1 comprimido', 'Manhã', 'Oral', '08:00:00', 3, true, 'Tomar em jejum'),
+ ('2022-01-04', '2 comprimidos', 'Tarde', 'Oral', '14:00:00', 4, false, 'Tomar após o almoço'),
+    ('2022-01-05', '1 comprimido', 'Noite', 'Oral', '20:00:00', 5, true, 'Tomar antes de dormir'),
+    ('2022-01-06', '1 comprimido', 'Manhã', 'Oral', '08:00:00', 6, false, 'Tomar em jejum'),
+    ('2022-01-07', '2 comprimidos', 'Tarde', 'Oral', '14:00:00', 7, true, 'Tomar após o almoço'),
+    ('2022-01-08', '1 comprimido', 'Noite', 'Oral', '20:00:00', 8, false, 'Tomar antes de dormir'),
+    ('2022-01-09', '1 comprimido', 'Manhã', 'Oral', '08:00:00', 9, true, 'Tomar em jejum'),
+    ('2022-01-10', '2 comprimidos', 'Tarde', 'Oral', '14:00:00', 10, false, 'Tomar após o almoço'),
+    ('2022-01-11', '1 comprimido', 'Noite', 'Oral', '20:00:00', 11, true, 'Tomar antes de dormir'),
+    ('2022-01-12', '1 comprimido', 'Manhã', 'Oral', '08:00:00', 12, false, 'Tomar em jejum'),
+    ('2022-01-13', '2 comprimidos', 'Tarde', 'Oral', '14:00:00', 13, true, 'Tomar após o almoço'),
+    ('2022-01-14', '1 comprimido', 'Noite', 'Oral', '20:00:00', 14, false, 'Tomar antes de dormir'),
+    ('2022-01-15', '1 comprimido', 'Manhã', 'Oral', '08:00:00', 15, true, 'Tomar em jejum'),
+    ('2022-01-16', '2 comprimidos', 'Tarde', 'Oral', '14:00:00', 16, false, 'Tomar após o almoço'),
+    ('2022-01-17', '1 comprimido', 'Noite', 'Oral', '20:00:00', 17, true, 'Tomar antes de dormir'),
+    ('2022-01-18', '1 comprimido', 'Manhã', 'Oral', '08:00:00', 18, false, 'Tomar em jejum'),
+    ('2022-01-19', '2 comprimidos', 'Tarde', 'Oral', '14:00:00', 19, true, 'Tomar após o almoço'),
+    ('2022-01-20', '1 comprimido', 'Noite', 'Oral', '20:00:00', 20, false, 'Tomar antes de dormir');
+
+
+-- Inserção de dados iniciais na tabela prescricao_medicamento
+INSERT INTO prescricao_medicamento (id_prescricao, id_medicamento) VALUES
+ (1, 1),
+ (1, 2),
+ (1, 3),
+ (1, 4),
+ (2, 5),
+ (2, 6),
+ (2, 7),
+ (2, 8),
+ (2, 3),
+ (2, 4),
+ (3, 5),
+ (3, 6),
+ (4, 7),
+ (4, 8),
+    (5, 9),
+    (5, 10),
+    (6, 11),
+    (6, 12),
+    (7, 13),
+    (7, 14),
+    (8, 15),
+    (8, 16),
+    (9, 17),
+    (9, 18),
+    (10, 19),
+    (10, 20);
+
+
 

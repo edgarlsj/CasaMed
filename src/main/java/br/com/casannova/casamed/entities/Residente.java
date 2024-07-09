@@ -1,18 +1,19 @@
 package br.com.casannova.casamed.entities;
 
 
+import com.fasterxml.jackson.annotation.JsonManagedReference;
 import jakarta.persistence.*;
 import lombok.*;
 
 import java.time.LocalDate;
+import java.util.List;
 
 @Entity
 @Table(name = "residente")
-@Getter
-@Setter
+@Data
 @NoArgsConstructor
 @AllArgsConstructor
-@EqualsAndHashCode
+
 
 
 public class Residente {
@@ -43,9 +44,12 @@ public class Residente {
     @Column(name = "alergias", nullable = true)
     private String alergias;
 
-    @ManyToOne
-    @JoinColumn(name = "id_medicamento")
-    private Medicamento medicamento;
+//    @ManyToOne
+//    @JoinColumn(name = "id_medicamento")
+//    private Medicamento medicamento;
+
+//    @OneToMany(mappedBy = "residente")
+//    private List<Prescricao> prescricoes;
 
 
 
